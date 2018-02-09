@@ -8,8 +8,8 @@ public class Coche {
     private int motor;
     private int peso_base;
     private String color;
-    private boolean climatizacion;
-    private boolean Tapizado_cuero;
+    private boolean climatizacion; //Configura si el coche trae climatización o aire común
+    private boolean Tapizado_cuero; //Configura si el coche trae tapizado de cuero o de pana
 
     public Coche(){
 

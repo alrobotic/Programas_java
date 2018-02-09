@@ -54,8 +54,15 @@ public class Coche {
         return esclima;
     }
 
-    public boolean isTapizado_cuero() {
-        return Tapizado_cuero;
+    public String isTapizado_cuero() {
+        String tapizado;
+
+        if (Tapizado_cuero){
+            tapizado = "Si";
+        }
+        else tapizado = "No";
+
+        return tapizado;
     }
 
     public void setTapizado_cuero(boolean tapizado_cuero) {

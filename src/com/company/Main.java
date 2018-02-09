@@ -18,5 +18,9 @@ public class Main {
         Renault.set_clima(true);
 
         System.out.println("El coche es climatizado? : " + Renault.dame_clima());
+
+        Renault.setTapizado_cuero(true);
+
+        System.out.println("El coche tiene Tapizado de Cuero?: " + Renault.isTapizado_cuero());
     }
 }

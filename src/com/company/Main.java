@@ -1,5 +1,7 @@
 package com.company;
 
+import javax.swing.*;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,7 +13,7 @@ public class Main {
 
         System.out.println("El largo del auto es: " + Renault.dame_largo() + " metros");
 
-        Renault.set_color("Amarillo");
+        Renault.set_color(JOptionPane.showInputDialog("Que color?: "));
 
         System.out.println("El coche es color: " + Renault.dame_color());
 

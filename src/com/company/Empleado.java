@@ -5,22 +5,31 @@ import java.util.GregorianCalendar;
 
 public class Empleado {
 
-    private String nombre;
+    private final String nombre;
     private double sueldo;
     private int dia;
     private int mes;
     private int ano;
     private Date Alta;
+    private String seccion;
+    private int ID;
+    private static int idSiguiente=1;
 
     public Empleado (String nombre, double sueldo, int dia, int mes, int ano){
 
         this.nombre = nombre;
         this.sueldo = sueldo;
-        this.dia = dia;
-        this.mes = mes;
-        this.ano = ano;
+        seccion = "Administracion";
         GregorianCalendar fech_Actual = new GregorianCalendar(ano,mes-1,dia);
         Alta = fech_Actual.getTime();
+        ID=idSiguiente;
+        idSiguiente++;
+
+    }
+
+    public Empleado (String nombre){
+
+        this(nombre,1000,1,1,2000);
     }
 
     public String getNombre() {
@@ -28,8 +37,6 @@ public class Empleado {
     }
 
     public Date getAlta() {
-        //String f_alta;
-        //f_alta = Alta.;
 
         return Alta;
     }
@@ -42,5 +49,25 @@ public class Empleado {
     public double getSueldo(){
 
         return sueldo;
+    }
+
+    public void setSeccion(String seccion) {
+
+        this.seccion = seccion;
+    }
+
+    public String getSeccion(){
+
+        return seccion;
+    }
+
+    public int dar_ID(){
+
+      return ID;
+    }
+
+    public static int darSiguienteID(){
+
+        return idSiguiente;
     }
 }
